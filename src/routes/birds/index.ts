@@ -8,7 +8,7 @@ const birds = require("../../../public/data.json");
 // }
 
 // sort birds alphabetically
-export const birdSortAlpha = (x, y) => {
+const birdSortAlpha = (x, y) => {
   if (x.name < y.name) {
     return -1;
   } else if (y.name < x.name) {
@@ -25,4 +25,5 @@ router.get("/", (req: Request, res: Response) => {
   res.json(birds.sort(birdSortAlpha));
 });
 
-export default { router };
+export default router;
+module.exports = birdSortAlpha;

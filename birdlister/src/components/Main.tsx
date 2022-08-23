@@ -1,25 +1,23 @@
 import { useEffect, useState } from "react";
-import BirdLister, { Props } from "./BirdLister";
+import BirdLister, { BirdProps } from "./BirdLister";
 
 const Main = () => {
-  const [birds, setBirds] = useState<Props>();
-
+  const loadBirdJson = async () => {
+    fetch("http://localhost:9090/birds")
+      .then((res) => res.json())
+      .then((birds) => setBirds(birds));
+  };
+  const [birds, setBirds] = useState<BirdProps[]>([]);
   useEffect(() => {
     loadBirdJson();
-  });
-
-  const loadBirdJson = async () => {
-    fetch("http://localhost:9090/birds").then((res) =>
-      res.json().then((data) => setBirds(data))
-    );
-  };
+  }, []);
 
   return (
     <main>
       <header>
         <h1>British Garden Birds</h1>
       </header>
-      <BirdLister items={birds} />
+      <BirdLister birds={birds} />
       <footer>
         <h2>ⓒElmstone Systems Limited</h2>
       </footer>

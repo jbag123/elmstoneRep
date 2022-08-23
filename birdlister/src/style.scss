@@ -1,12 +1,18 @@
 html {
-  background: #02deae;
+  background: #9ec7bf;
+  font-family: "Roboto", sans-serif;
+
+  h1,
+  h2 {
+    margin: 0;
+  }
 
   header,
   footer {
     background: #326c54;
     text-align: center;
     color: #fff;
-    padding: 2rem;
+    padding: 1rem;
     background: #326c54;
   }
 
@@ -18,5 +24,46 @@ html {
   footer {
     position: sticky;
     bottom: 0;
+  }
+
+  .bird__list {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .bird__item {
+    width: 50%;
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+  }
+
+  .bird__image {
+    width: 25%;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .bird__text-box {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2rem;
+  }
+
+  .bird__name {
+    color: #326c54;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+  }
+
+  .bird__desc {
+    color: #326c54;
+    font-size: 1.5rem;
+    margin: 0;
   }
 }

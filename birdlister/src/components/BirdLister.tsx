@@ -1,5 +1,5 @@
 export interface Props {
-  items: BirdProps[];
+  birds: BirdProps[];
 }
 
 export interface BirdProps {
@@ -8,16 +8,19 @@ export interface BirdProps {
   img: string;
 }
 
-const BirdLister = ({ items }: Props) => {
+const BirdLister = ({ birds }: Props) => {
   return (
-    <ul>
-      {items.map((bird) => (
-        <div>
-          <p>{bird.description}</p>
-          <p>{bird.img}</p>
-          <p>{bird.name}</p>
-        </div>
-      ))}
+    <ul className="bird__list">
+      {birds &&
+        birds.map((bird) => (
+          <li className="bird__item">
+            <img className="bird__image" alt={bird.name} src={bird.img} />
+            <div className="bird__text-box">
+              <p className="bird__name">{bird.name}</p>
+              <p className="bird__desc">{bird.description}</p>
+            </div>
+          </li>
+        ))}
     </ul>
   );
 };

@@ -1,7 +1,9 @@
 import * as express from "express";
 import routes from "./routes";
-var cors = require("cors");
+import * as cors from "cors";
+
 const app = express();
+
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());

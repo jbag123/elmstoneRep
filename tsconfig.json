@@ -6,7 +6,7 @@
     "outDir": "./build",
     "rootDir": "./src",
     "allowJs": true,
-    "alwaysStrict": true,
+    "alwaysStrict": false,
     "target": "es2019",
     "module": "commonjs",
     "moduleResolution": "node",
