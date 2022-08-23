@@ -1,0 +1,22 @@
+html {
+  background: #02deae;
+
+  header,
+  footer {
+    background: #326c54;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    background: #326c54;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
+  footer {
+    position: sticky;
+    bottom: 0;
+  }
+}

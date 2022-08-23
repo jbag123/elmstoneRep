@@ -1,0 +1,26 @@
+{
+  "name": "service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./build/bin/www.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "jest": "^28.1.3",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.18.10",
+    "babel-jest": "^28.1.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "sass": "^1.54.5",
+    "ts-jest": "^28.0.8"
+  }
+}
